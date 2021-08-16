@@ -7,12 +7,13 @@ ofstream out("suma.out");
 int main()
 {
     int monede[100], nr_monede, i,sortat, schimb, suma;
-//citim ]n fisier numarul de monede si suma
+//citim in fisier numarul de monede si suma
     in>>nr_monede>>suma;
-// citim valoarea monedelor cu care se va restitui suma ce trebuie returnata
+// citim valoarea monedelor cu care se va restitui din suma restul
     for(i=0; i<nr_monede; i++)
         in>>monede[i];
-//utilizand o metoda se sortare se sorteaza monedele in ordine descrescatoare
+
+//utilizand o metoda se sortare, se sorteaza monedele in ordine descrescatoare
     do
     {
         sortat = 0;
@@ -26,15 +27,17 @@ int main()
     }
     }
 
+//utilizam metoda Greedy pentru calcularea numarului de monezi restituite
     while (sortat == 1);
     i = 1;
 
-//utilizam metoda Greedy pentru calcularea numarului de monezi restituite
+
     while(suma!=0)
     {
         if (suma/monede[i])
         {
             out<<"-------------------------"<<endl;
+
             out<<monede[i]<<'x'<<suma/monede[i]<<'='<<monede[i]*(suma/monede[i])<<'\n';
             suma = suma % monede[i];
         }

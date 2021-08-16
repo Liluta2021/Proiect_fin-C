@@ -1,0 +1,5 @@
+Moneda 100 a fost utilizata de: 5 ori
+Moneda 50 a fost utilizata de: 1 ori
+Moneda 20 a fost utilizata de: 2 ori
+Moneda 10 a fost utilizata de: 0 ori
+Moneda 5 a fost utilizata de: 0 ori
